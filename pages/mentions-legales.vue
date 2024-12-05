@@ -1,21 +1,8 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
- <h1>
-   Mentions légales
- </h1>
-  <p>
-    Pas de plagiat !
-  </p>
+    <h1>Mentions légales</h1>
+    <p class="text-center text-xl font-bold text-red-500 mt-4">
+        Pas de plagiat !
+    </p>
 </template>
-
-<style scoped>
-p{
-  text-align:center;
-  font-size:1.5em;
-  font-weight:bold;
-  color:red;
-}
-</style>
