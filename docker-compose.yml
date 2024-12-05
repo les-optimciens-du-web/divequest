@@ -1,0 +1,15 @@
+services:
+  vue_app:
+    container_name: divequest.untypequicode.fr_container
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${EXTERNAL_PORT}:${INTERNAL_PORT}
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.nuxt
+      - /app/.output
+    command: "node .output/server/index.mjs"
