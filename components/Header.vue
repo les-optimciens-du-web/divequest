@@ -2,7 +2,7 @@
 
 <template>
     <header
-        class="fixed top-0 left-0 right-0 h-16 flex items-center justify-center"
+        class="fixed top-0 left-0 right-0 h-16 flex items-center justify-center z-50"
     >
         <NuxtLink to="/"> Dive Quest </NuxtLink>
     </header>
