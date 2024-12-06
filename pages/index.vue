@@ -5,23 +5,22 @@
     <!-- Div fixe en bas de la page avec opacité dynamique -->
     <div
         :style="{ opacity: opacity }"
-        class="fixed top-0 bottom-0 left-0 right-0 bg-black z-30"
+        class="fixed top-0 bottom-0 left-0 right-0 bg-black z-40"
     ></div>
 
     <!-- Image qui doit être visible au centre de la page -->
-    <div class="h-[50vh] w-full z-40 relative overflow-hidden">
+    <div class="h-[50vh] w-full z-20 relative overflow-hidden">
         <img
             src="/public/image-dessus-mer.svg"
             class="w-full h-full object-cover object-top"
         />
     </div>
 
-    <div class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-0  z-20">
+    <div class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-0  z-30">
       <img 
       :style="{ transform: `rotate(${rotate})` }"
       src="/public/perso-sous-mer-final(ptetre).svg" class="w-1/2 h-auto">
     </div>
-
     <!-- Contenu pour tester le défilement -->
     <div style="height: 400vh"></div>
 </template>
