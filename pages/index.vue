@@ -44,10 +44,28 @@ const handleRotate = () => {
     const scrollPosition = window.scrollY;
     const maxScroll = document.body.scrollHeight - window.innerHeight;
     const scrollPercentage = scrollPosition / maxScroll;
-    const tmp = `${-10 + scrollPercentage * (-360)*4}deg`;
+    const tmpInt = -10 + scrollPercentage * (-360)*4;
+    const tmp = `${tmpInt}deg`;
     if (scrollPercentage >= 0.25/4) {
         rotate.value = "-100deg";
-    } else {
+        const modulo = 40;
+        const dec = tmpInt % modulo < 0 ? -(tmpInt%modulo) : tmpInt % modulo;  
+        // console.log(dec);
+         if(dec >= 0 && dec < modulo/4){
+            rotate.value = `${-100 + dec % (modulo/4)}deg`;
+            // console.log(`1  ${-100 + dec % 5 + 1}`);
+        } else if (dec >= modulo/4 && dec < modulo/2){
+            rotate.value = `${-100 + (modulo/4) - dec % (modulo/4)}deg`;
+            // console.log(`2  ${ -100 + 4 - dec % 5}`);
+        } else if (dec >= modulo/2 && dec < modulo*0.75) {
+            rotate.value = `${-100 - dec % (modulo/4)}deg`;
+            // console.log(`3  ${ -100 - dec % 5 - 1}`);
+        } else if (dec >= modulo*0.75 && dec < modulo) {
+            rotate.value = `${-100 - (modulo/4) + dec % (modulo/4)}deg`;
+            // console.log(`4  ${ -100 - 5 + dec % 5}`);
+        }
+    } 
+    else {
         rotate.value = tmp;
     }
 };
