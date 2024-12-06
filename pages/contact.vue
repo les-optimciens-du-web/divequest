@@ -46,7 +46,7 @@
             <span class="text-sm ml-2"></span>
         </p>
     </h3>
-    <h4>Hébergeur: infomaniaque</h4>
+    <h4>Hébergeur: Infomaniak</h4>
 </template>
 
 <script></script>
