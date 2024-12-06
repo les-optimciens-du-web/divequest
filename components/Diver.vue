@@ -336,7 +336,7 @@
     </g>
     <template v-if="organes">
     <ellipse
-       style="opacity:0;fill:#000000;stroke-width:0.384602"
+       style="opacity:0.1;fill:#000000;stroke-width:0.384602"
        id="0"
        class="organesvg"
        :class="{ active: isCurrentOrgane(0) }"
@@ -348,7 +348,7 @@
        cx="1530.0603"
        inkscape:label="bronches" />
        <ellipse
-          style="fill:#000000;fill-rule:evenodd;stroke-width:0.72675002;stroke-dasharray:none;opacity:0"
+          style="fill:#000000;fill-rule:evenodd;stroke-width:0.72675002;stroke-dasharray:none;opacity:0.1"
           id="2"
           class="organesvg"
           :class="{ active: isCurrentOrgane(2) }"
@@ -360,7 +360,7 @@
           ry="105.24628"
           inkscape:label="glandes-salivaires" />
        <path
-          style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
+          style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0.1"
           id="3"
           class="organesvg"
           :class="{ active: isCurrentOrgane(3) }"
@@ -377,7 +377,7 @@
           d="m 1539.2408,-2556.2747 a 139.4256,69.925636 0 0 1 -139.3916,69.9257 139.4256,69.925636 0 0 1 -139.4596,-69.8915 139.4256,69.925636 0 0 1 139.3235,-69.9598 139.4256,69.925636 0 0 1 139.5276,69.8574 l -139.4255,0.068 z"
           inkscape:label="glande-thyroide" />
     <path
-       style="opacity:0;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.44999;stroke-dasharray:none"
+       style="opacity:0.1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.44999;stroke-dasharray:none"
        id="1"
        class="organesvg"
        :class="{ active: isCurrentOrgane(1) }"
@@ -394,7 +394,7 @@
        d="m 2720.7695,4256.9902 a 192.76192,165.09598 0 0 1 -192.7149,165.096 192.76192,165.09598 0 0 1 -192.8089,-165.0154 192.76192,165.09598 0 0 1 192.6207,-165.1765 192.76192,165.09598 0 0 1 192.903,164.9347 l -192.7618,0.1612 z"
        inkscape:label="poumons" />
     <ellipse
-       style="opacity:0;fill:#000000;fill-rule:evenodd;stroke-width:0.749999"
+       style="opacity:0.1;fill:#000000;fill-rule:evenodd;stroke-width:0.749999"
        id="4"
        class="organesvg"
        cx="676.09094"
@@ -406,7 +406,7 @@
        ry="103.34763"
        inkscape:label="vertebres" />
     <ellipse
-       style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
+       style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0.1"
        id="7"
        class="organesvg"
        :class="{ active: isCurrentOrgane(7) }"
@@ -418,7 +418,7 @@
        ry="117.91967"
        inkscape:label="reins" />
     <ellipse
-       style="fill:#000000;fill-rule:evenodd;stroke-width:0.516368;opacity:0"
+       style="fill:#000000;fill-rule:evenodd;stroke-width:0.516368;opacity:0.1"
        id="6"
        class="organesvg"
        :class="{ active: isCurrentOrgane(6) }"
@@ -432,7 +432,7 @@
        inkscape:transform-center-y="29.470018"
        inkscape:label="systeme-digestif" />
     <ellipse
-       style="fill:#000000;fill-rule:evenodd;stroke-width:0.258215;opacity:0"
+       style="fill:#000000;fill-rule:evenodd;stroke-width:0.258215;opacity:0.1"
        id="5"
        class="organesvg"
        :class="{ active: isCurrentOrgane(5) }"

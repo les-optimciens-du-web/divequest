@@ -32,7 +32,7 @@
         v-if="isVertical()"
         class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-0 z-50"
     >
-        <div :style="{ transform: `rotate(${rotate})` }" class="w-1/3 h-auto">
+        <div :style="{ transform: `rotate(${rotate})` }" class="w-1/2 h-auto">
             <Diver :organes="true" />
         </div>
     </div>
