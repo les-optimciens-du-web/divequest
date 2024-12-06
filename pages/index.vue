@@ -24,9 +24,15 @@
         </div>
     </div>
     <div
+        class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-1/2 z-40"
+    >
+        <Card :organe="organeCurrent" />
+    </div>
+    <div
+        v-if="isVertical()"
         class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-0 z-50"
     >
-        <div :style="{ transform: `rotate(${rotate})` }" class="w-1/2 h-auto">
+        <div :style="{ transform: `rotate(${rotate})` }" class="w-1/3 h-auto">
             <Diver :organes="true" />
         </div>
     </div>
@@ -45,6 +51,16 @@ const handleScroll = () => {
     const scrollPosition = window.scrollY;
     const maxScroll = document.body.scrollHeight - window.innerHeight;
     opacity.value = Math.max(0, (scrollPosition / maxScroll) * 0.5);
+};
+
+const isVertical = () => {
+    if (window && window.scrollY) {
+        const scrollPosition = window.scrollY;
+        const maxScroll = document.body.scrollHeight - window.innerHeight;
+        const scrollPercentage = scrollPosition / maxScroll;
+        return scrollPercentage >= 0.25 / 4;
+    }
+    return false;
 };
 
 const rotate = ref("-10deg");
@@ -89,7 +105,12 @@ onUnmounted(() => {
     window.removeEventListener("scroll", handleRotate);
 });
 
-const organeCurrent = ref("");
+const organeCurrent = ref({
+    id: -1,
+    nom: "",
+    texte: "",
+    idsvg: "",
+});
 provide("organeCurrent", organeCurrent);
 </script>
 

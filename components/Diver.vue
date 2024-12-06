@@ -455,20 +455,25 @@ const props = defineProps<{
 }>();
 
 
-const organeCurrent = inject("organeCurrent") as Ref<
-  string
->;
+const organeCurrentName = ref(-1) as Ref<number>;
+const organeCurrent = inject("organeCurrent") as Ref<{
+    id: number,
+    nom: string,
+    texte: string,
+    idsvg: string,
+}>;
 
-function setCurrentOrgane(organe:  string) {
-  console.log(organe);
-  if (organe === organeCurrent.value) {
-    organeCurrent.value = "" ;
+async function setCurrentOrgane(id:  number) {
+  if (id === organeCurrentName.value) {
+    organeCurrentName.value = -1 ;
+    organeCurrent.value = { id: -1, nom: "", texte: "", idsvg: "" };
   } else {
-    organeCurrent.value = organe;
+    organeCurrentName.value = id;
+    organeCurrent.value = await $fetch(`/api/dv/${id}`) as any;
   }
 }
 
-function isCurrentOrgane(nom: string) {
-  return organeCurrent.value === nom;
+function isCurrentOrgane(id: number) {
+  return organeCurrentName.value === id;
 }
 </script>
