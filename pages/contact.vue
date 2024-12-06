@@ -1,13 +1,12 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-<h1>
-  Contact
-</h1>
+    <div class="h-20"></div>
+    <h1 class="top-20">
+        Contact
+        <NuxtLink to="/game"> Game </NuxtLink>
+    </h1>
+    class
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
