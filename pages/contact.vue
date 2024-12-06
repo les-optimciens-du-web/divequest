@@ -1,7 +1,6 @@
 <script setup lang="ts"></script>
 
 <template>
-    <h1 class="mt-4">Mentions légales</h1>
     <p class="text-center text-xl font-bold text-red-500 mt-4">
         Pas de plagiat ici !
     </p>
@@ -10,7 +9,7 @@
         <a
             href="https://www.nuitdelinfo.com/"
             target="_blank"
-            class="text-blue-500 underline"
+            class="text-dark underline"
         >
             la nuit de l'info 2024
         </a>
@@ -21,7 +20,7 @@
             -<a
                 href="https://untypequicode.fr/"
                 target="_blank"
-                class="text-blue-500 underline"
+                class="text-dark underline"
             >
                 Ethan FACCA</a
             >
