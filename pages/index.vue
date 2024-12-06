@@ -16,19 +16,19 @@
         />
     </div>
 
-    <div class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-0  z-30">
-      <div 
-      :style="{ transform: `rotate(${rotate})` }"
-      class="w-1/2 h-auto">
-      <Diver :organes="false"/>
+    <div
+        class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-0 z-30"
+    >
+        <div :style="{ transform: `rotate(${rotate})` }" class="w-1/2 h-auto">
+            <Diver :organes="false" />
+        </div>
     </div>
-    </div>
-    <div class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-0  z-50">
-      <div 
-      :style="{ transform: `rotate(${rotate})` }"
-      class="w-1/2 h-auto">
-      <Diver :organes="true"/>
-    </div>
+    <div
+        class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-0 z-50"
+    >
+        <div :style="{ transform: `rotate(${rotate})` }" class="w-1/2 h-auto">
+            <Diver :organes="true" />
+        </div>
     </div>
     <!-- Contenu pour tester le défilement -->
     <div style="height: 400vh"></div>
@@ -52,32 +52,30 @@ const handleRotate = () => {
     const scrollPosition = window.scrollY;
     const maxScroll = document.body.scrollHeight - window.innerHeight;
     const scrollPercentage = scrollPosition / maxScroll;
-    const tmpInt = -10 + scrollPercentage * (-360)*4;
+    const tmpInt = -10 + scrollPercentage * -360 * 4;
     const tmp = `${tmpInt}deg`;
-    if (scrollPercentage >= 0.25/4) {
+    if (scrollPercentage >= 0.25 / 4) {
         rotate.value = "-100deg";
         const modulo = 40;
-        const dec = tmpInt % modulo < 0 ? -(tmpInt%modulo) : tmpInt % modulo;  
+        const dec = tmpInt % modulo < 0 ? -(tmpInt % modulo) : tmpInt % modulo;
         // console.log(dec);
-         if(dec >= 0 && dec < modulo/4){
-            rotate.value = `${-100 + dec % (modulo/4)}deg`;
+        if (dec >= 0 && dec < modulo / 4) {
+            rotate.value = `${-100 + (dec % (modulo / 4))}deg`;
             // console.log(`1  ${-100 + dec % 5 + 1}`);
-        } else if (dec >= modulo/4 && dec < modulo/2){
-            rotate.value = `${-100 + (modulo/4) - dec % (modulo/4)}deg`;
+        } else if (dec >= modulo / 4 && dec < modulo / 2) {
+            rotate.value = `${-100 + modulo / 4 - (dec % (modulo / 4))}deg`;
             // console.log(`2  ${ -100 + 4 - dec % 5}`);
-        } else if (dec >= modulo/2 && dec < modulo*0.75) {
-            rotate.value = `${-100 - dec % (modulo/4)}deg`;
+        } else if (dec >= modulo / 2 && dec < modulo * 0.75) {
+            rotate.value = `${-100 - (dec % (modulo / 4))}deg`;
             // console.log(`3  ${ -100 - dec % 5 - 1}`);
-        } else if (dec >= modulo*0.75 && dec < modulo) {
-            rotate.value = `${-100 - (modulo/4) + dec % (modulo/4)}deg`;
+        } else if (dec >= modulo * 0.75 && dec < modulo) {
+            rotate.value = `${-100 - modulo / 4 + (dec % (modulo / 4))}deg`;
             // console.log(`4  ${ -100 - 5 + dec % 5}`);
         }
-    } 
-    else {
+    } else {
         rotate.value = tmp;
     }
 };
-
 
 // Attacher l'écouteur d'événements au moment du montage
 onMounted(() => {
@@ -90,6 +88,9 @@ onUnmounted(() => {
     window.removeEventListener("scroll", handleScroll);
     window.removeEventListener("scroll", handleRotate);
 });
+
+const organeCurrent = ref("");
+provide("organeCurrent", organeCurrent);
 </script>
 
 <style scoped>

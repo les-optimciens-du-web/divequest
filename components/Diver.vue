@@ -421,6 +421,8 @@
        style="fill:#000000;fill-rule:evenodd;stroke-width:0.258215;opacity:0"
        id="veines-et-arteres"
        class="organesvg"
+       :class="{ active: isCurrentOrgane('veines-et-arteres') }"
+       @click="setCurrentOrgane('veines-et-arteres')"
        transform="matrix(-0.97444119,0.22464275,0.84886819,0.52860458,0,0)"
        ry="250.96721"
        rx="645.70941"
@@ -437,6 +439,12 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    opacity: 0.5 !important;
+}
+.organesvg.active {
+    position: relative;
+    width: 100%;
+    height: 100vh;
     opacity: 1 !important;
 }
 </style>
@@ -446,4 +454,21 @@ const props = defineProps<{
   organes: boolean;
 }>();
 
+
+const organeCurrent = inject("organeCurrent") as Ref<
+  string
+>;
+
+function setCurrentOrgane(organe:  string) {
+  console.log(organe);
+  if (organe === organeCurrent.value) {
+    organeCurrent.value = "" ;
+  } else {
+    organeCurrent.value = organe;
+  }
+}
+
+function isCurrentOrgane(nom: string) {
+  return organeCurrent.value === nom;
+}
 </script>
