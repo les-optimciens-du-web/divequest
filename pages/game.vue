@@ -30,19 +30,19 @@
                 @mouseup="stopBreathing"
                 @mouseleave="stopBreathing"
             >
-                Maintiens pour augmenter le compteur
+                Maintenir pour augmenter le compteur
             </button>
         </div>
     </h1>
     <div v-if="!alive" class="game-over-container">
         <p v-if="die_o2">Vous êtes mort par manque d'O2</p>
         <p v-if="die_o2_pres">
-            Vous êtes mort car vous aviait trop de O2 pour le niveau de
-            préssion, cela vous a rendu fou
+            Vous êtes mort car vous aviez trop de O2 pour le niveau de
+            pression, cela vous a rendu fou.
         </p>
         <p v-if="die_card">
-            Vous devait faire attention pour vos battement cardiaque, il faut en
-            faire assez, mais pas trop
+            Vous devez faire attention à vos battements cardiaques, il faut en
+            faire assez, mais pas trop.
         </p>
         <button @click="RefreshGame" class="button-game">Restart</button>
     </div>
