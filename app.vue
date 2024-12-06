@@ -11,3 +11,6 @@
 // import Header from "~/component/Header.vue";
 // import Footer from "~/component/Footer.vue";
 </script>
+<style>
+    @import "assets/main.css"; 
+</style>
