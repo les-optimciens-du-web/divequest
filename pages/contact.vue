@@ -5,7 +5,7 @@
         Pas de plagiat ici !
     </p>
     <h2>
-        Réaliser durant
+        Réalisé durant
         <a
             href="https://www.nuitdelinfo.com/"
             target="_blank"
