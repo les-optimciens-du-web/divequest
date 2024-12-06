@@ -337,10 +337,10 @@
     <template v-if="organes">
     <ellipse
        style="opacity:0;fill:#000000;stroke-width:0.384602"
-       id="bronches"
+       id="0"
        class="organesvg"
-       :class="{ active: isCurrentOrgane('bronches') }"
-       @click="setCurrentOrgane('bronches')"
+       :class="{ active: isCurrentOrgane('0') }"
+       @click="setCurrentOrgane('0')"
        transform="scale(1,-1)"
        ry="73.26165"
        rx="190.0256"
@@ -349,10 +349,10 @@
        inkscape:label="bronches" />
        <ellipse
           style="fill:#000000;fill-rule:evenodd;stroke-width:0.72675002;stroke-dasharray:none;opacity:0"
-          id="glandes-salivaires"
+          id="2"
           class="organesvg"
-          :class="{ active: isCurrentOrgane('glandes-salivaires') }"
-          @click="setCurrentOrgane('glandes-salivaires')"
+          :class="{ active: isCurrentOrgane('2') }"
+          @click="setCurrentOrgane('2')"
           cx="1053.7393"
           cy="-2664.5239"
           transform="scale(1,-1)"
@@ -361,10 +361,10 @@
           inkscape:label="glandes-salivaires" />
        <path
           style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
-          id="glande-thyroide"
+          id="3"
           class="organesvg"
-          :class="{ active: isCurrentOrgane('glande-thyroide') }"
-          @click="setCurrentOrgane('glande-thyroide')"
+          :class="{ active: isCurrentOrgane('3') }"
+          @click="setCurrentOrgane('3')"
           transform="scale(1,-1)"
           sodipodi:type="arc"
           sodipodi:cx="1399.8152"
@@ -378,10 +378,10 @@
           inkscape:label="glande-thyroide" />
     <path
        style="opacity:0;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.44999;stroke-dasharray:none"
-       id="poumons"
+       id="1"
        class="organesvg"
-       :class="{ active: isCurrentOrgane('poumons') }"
-       @click="setCurrentOrgane('poumons')"
+       :class="{ active: isCurrentOrgane('1') }"
+       @click="setCurrentOrgane('1')"
        transform="matrix(-0.87053171,0.49211233,0.96339391,0.26808987,0,0)"
        sodipodi:type="arc"
        sodipodi:cx="2528.0076"
@@ -395,22 +395,22 @@
        inkscape:label="poumons" />
     <ellipse
        style="opacity:0;fill:#000000;fill-rule:evenodd;stroke-width:0.749999"
-       id="vertebres"
+       id="4"
        class="organesvg"
        cx="676.09094"
        cy="-3284.2283"
-       :class="{ active: isCurrentOrgane('vertebres') }"
-       @click="setCurrentOrgane('vertebres')"
+       :class="{ active: isCurrentOrgane('4') }"
+       @click="setCurrentOrgane('4')"
        transform="matrix(0.84309426,-0.53776582,-0.53776509,-0.84309472,0,0)"
        rx="514.47076"
        ry="103.34763"
        inkscape:label="vertebres" />
     <ellipse
        style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
-       id="reins"
+       id="7"
        class="organesvg"
-       :class="{ active: isCurrentOrgane('reins') }"
-       @click="setCurrentOrgane('reins')"
+       :class="{ active: isCurrentOrgane('7') }"
+       @click="setCurrentOrgane('7')"
        cx="2272.9492"
        cy="-1959.9805"
        transform="scale(1,-1)"
@@ -419,10 +419,10 @@
        inkscape:label="reins" />
     <ellipse
        style="fill:#000000;fill-rule:evenodd;stroke-width:0.516368;opacity:0"
-       id="systeme-digestif"
+       id="6"
        class="organesvg"
-       :class="{ active: isCurrentOrgane('systeme-digestif') }"
-       @click="setCurrentOrgane('systeme-digestif')"
+       :class="{ active: isCurrentOrgane('6') }"
+       @click="setCurrentOrgane('6')"
        cx="1603.2136"
        cy="-2120.969"
        transform="matrix(0.99892218,0.04641626,-0.13595395,-0.99071516,0,0)"
@@ -433,10 +433,10 @@
        inkscape:label="systeme-digestif" />
     <ellipse
        style="fill:#000000;fill-rule:evenodd;stroke-width:0.258215;opacity:0"
-       id="veines-et-arteres"
+       id="5"
        class="organesvg"
-       :class="{ active: isCurrentOrgane('veines-et-arteres') }"
-       @click="setCurrentOrgane('veines-et-arteres')"
+       :class="{ active: isCurrentOrgane('5') }"
+       @click="setCurrentOrgane('5')"
        transform="matrix(-0.97444119,0.22464275,0.84886819,0.52860458,0,0)"
        ry="250.96721"
        rx="645.70941"
