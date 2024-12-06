@@ -50,4 +50,8 @@ p {
     text-align: center;
     font-size: 3em;
 }
+a {
+    @apply text-white;
+    text-decoration: none;
+}
 </style>

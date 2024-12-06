@@ -42,7 +42,7 @@
         <p class="ml-6">
             - Guillaume RENAUD
             <NuxtLink class="ml-16" to="/game"
-                ><span style="color: white">Game</span></NuxtLink
+                ><span class="text-blue-500">Game</span></NuxtLink
             >
             <span class="text-sm ml-2"></span>
         </p>

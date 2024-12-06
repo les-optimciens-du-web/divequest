@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-blue-500 w-screen h-screen">
         <!--    <NuxtRouteAnnouncer />-->
         <Header />
         <NuxtPage />
@@ -12,5 +12,5 @@
 // import Footer from "~/component/Footer.vue";
 </script>
 <style>
-    @import "assets/main.css"; 
+@import "assets/main.css";
 </style>
