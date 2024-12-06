@@ -24,6 +24,7 @@
         </div>
     </div>
     <div
+        v-if="isVertical()"
         class="fixed flex justify-center items-center top-0 bottom-0 left-0 right-1/2 z-40"
     >
         <Card :organe="organeCurrent" />
