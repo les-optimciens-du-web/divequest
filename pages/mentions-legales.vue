@@ -1,4 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
     <h1 class="mt-4">Mentions légales</h1>
@@ -23,35 +24,28 @@
                 target="_blank"
                 class="text-blue-500 underline"
             >
-                Ethan Facca</a
+                Ethan FACCA</a
             >
-            <span class="text-sm ml-2">(juste clickez)</span>
+            <span class="text-sm ml-2">(Le LEAD de la team !)</span>
         </p>
         <p class="ml-6">
-            - Vincent Brunaux
-            <span class="text-sm ml-2">(uv u ft gbju dijfs qpvs sjfo)</span>
+            - Vincent BRUNEAU
+            <span class="text-sm ml-2"></span>
         </p>
         <p class="ml-6">
-            - Pierre Lahaye
-            <span class="text-sm ml-2"
-                >(trop fatigué pour continuer après 1h)</span
-            >
+            - Pierre LAHAYE
+            <span class="text-sm ml-2"></span>
         </p>
         <p class="ml-6">
-            - Micky Mari
-            <span class="text-sm ml-2"
-                >(à plus de points sur cookie clicker que de secondes de
-                programmation)</span
-            >
+            - Micky MARI
+            <span class="text-sm ml-2"></span>
         </p>
         <p class="ml-6">
-            - Le GOAT Guillaume Renaud
-            <span class="text-sm ml-2"
-                >(absolument pas moi qui ai fait cette page)</span
-            >
+            - Guillaume RENAUD                <NuxtLink class="ml-16" to="/game"><span style="color: white">Game</span></NuxtLink>
+            <span class="text-sm ml-2"></span>
         </p>
     </h3>
-    <h4>Héberger: infomaniaque</h4>
+    <h4>Hébergeur: infomaniaque</h4>
 </template>
 
 <script></script>

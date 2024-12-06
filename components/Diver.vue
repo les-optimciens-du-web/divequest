@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
+<template>
 <svg
    version="1.1"
    id="svg2"
-   width="7438.6665"
-   height="5090.6665"
    viewBox="0 0 7438.6665 5090.6665"
-   sodipodi:docname="perso-sous-mer-final.svg"
+   sodipodi:docname="perso-sous-mer-final(ptetre).svg"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -15,25 +11,6 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
      id="defs6" />
-  <sodipodi:namedview
-     id="namedview4"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     showgrid="false"
-     inkscape:zoom="0.74174964"
-     inkscape:cx="1408.8312"
-     inkscape:cy="1832.1546"
-     inkscape:window-width="1920"
-     inkscape:window-height="1131"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="g8" />
   <g
      id="g8"
      inkscape:groupmode="layer"
@@ -42,6 +19,7 @@
     <g
        id="g10"
        transform="matrix(0.1,0,0,0.1,0,1.4707032e-4)">
+       <template v-if="!organes">
       <path
          d="m 18684.3,28431.2 -335.8,-926.9 c -67.1,-128.5 -576.6,18.9 -705,84.6 l -19,10.2 c -129.9,67.2 -179.5,224.8 -113.9,354.7 l 385.4,782.5 c 67.1,129.9 226.3,179.5 354.7,113.8 l 20.5,-10.2 c 128.4,-65.7 478.7,-278.8 413.1,-408.7"
          style="fill:#cc8f00;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -354,21 +332,56 @@
          d="m 8058.98,24098.7 -100.71,562 c 348.87,-164.9 670.01,5.9 861.23,259.9 l 181,-505.1 c -256.91,-291.9 -557.61,-385.4 -941.52,-316.8"
          style="fill:#42527d;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path168" />
+         </template>
     </g>
+    <template v-if="organes">
     <ellipse
        style="opacity:0;fill:#000000;stroke-width:0.384602"
-       id="bronches"
+       id="0"
        class="organesvg"
+       :class="{ active: isCurrentOrgane(0) }"
+       @click="setCurrentOrgane(0)"
        transform="scale(1,-1)"
        ry="73.26165"
        rx="190.0256"
        cy="-2408.1018"
        cx="1530.0603"
        inkscape:label="bronches" />
+       <ellipse
+          style="fill:#000000;fill-rule:evenodd;stroke-width:0.72675002;stroke-dasharray:none;opacity:0"
+          id="2"
+          class="organesvg"
+          :class="{ active: isCurrentOrgane(2) }"
+          @click="setCurrentOrgane(2)"
+          cx="1053.7393"
+          cy="-2664.5239"
+          transform="scale(1,-1)"
+          rx="115.34073"
+          ry="105.24628"
+          inkscape:label="glandes-salivaires" />
+       <path
+          style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
+          id="3"
+          class="organesvg"
+          :class="{ active: isCurrentOrgane(3) }"
+          @click="setCurrentOrgane(3)"
+          transform="scale(1,-1)"
+          sodipodi:type="arc"
+          sodipodi:cx="1399.8152"
+          sodipodi:cy="-2556.2747"
+          sodipodi:rx="139.4256"
+          sodipodi:ry="69.925636"
+          sodipodi:start="0"
+          sodipodi:end="6.2822088"
+          sodipodi:arc-type="slice"
+          d="m 1539.2408,-2556.2747 a 139.4256,69.925636 0 0 1 -139.3916,69.9257 139.4256,69.925636 0 0 1 -139.4596,-69.8915 139.4256,69.925636 0 0 1 139.3235,-69.9598 139.4256,69.925636 0 0 1 139.5276,69.8574 l -139.4255,0.068 z"
+          inkscape:label="glande-thyroide" />
     <path
        style="opacity:0;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.44999;stroke-dasharray:none"
-       id="poumons"
+       id="1"
        class="organesvg"
+       :class="{ active: isCurrentOrgane(1) }"
+       @click="setCurrentOrgane(1)"
        transform="matrix(-0.87053171,0.49211233,0.96339391,0.26808987,0,0)"
        sodipodi:type="arc"
        sodipodi:cx="2528.0076"
@@ -382,18 +395,22 @@
        inkscape:label="poumons" />
     <ellipse
        style="opacity:0;fill:#000000;fill-rule:evenodd;stroke-width:0.749999"
-       id="vertebres"
+       id="4"
        class="organesvg"
        cx="676.09094"
        cy="-3284.2283"
+       :class="{ active: isCurrentOrgane(4) }"
+       @click="setCurrentOrgane(4)"
        transform="matrix(0.84309426,-0.53776582,-0.53776509,-0.84309472,0,0)"
        rx="514.47076"
        ry="103.34763"
        inkscape:label="vertebres" />
     <ellipse
        style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
-       id="reins"
+       id="7"
        class="organesvg"
+       :class="{ active: isCurrentOrgane(7) }"
+       @click="setCurrentOrgane(7)"
        cx="2272.9492"
        cy="-1959.9805"
        transform="scale(1,-1)"
@@ -402,8 +419,10 @@
        inkscape:label="reins" />
     <ellipse
        style="fill:#000000;fill-rule:evenodd;stroke-width:0.516368;opacity:0"
-       id="systeme-digestif"
+       id="6"
        class="organesvg"
+       :class="{ active: isCurrentOrgane(6) }"
+       @click="setCurrentOrgane(6)"
        cx="1603.2136"
        cy="-2120.969"
        transform="matrix(0.99892218,0.04641626,-0.13595395,-0.99071516,0,0)"
@@ -414,38 +433,61 @@
        inkscape:label="systeme-digestif" />
     <ellipse
        style="fill:#000000;fill-rule:evenodd;stroke-width:0.258215;opacity:0"
-       id="veines-et-arteres"
+       id="5"
        class="organesvg"
+       :class="{ active: isCurrentOrgane(5) }"
+       @click="setCurrentOrgane(5)"
        transform="matrix(-0.97444119,0.22464275,0.84886819,0.52860458,0,0)"
        ry="250.96721"
        rx="645.70941"
        cy="3517.4292"
        cx="-225.67226"
        inkscape:label="veines-et-arteres" />
-    <ellipse
-       style="fill:#000000;fill-rule:evenodd;stroke-width:0.72675002;stroke-dasharray:none;opacity:0"
-       id="glandes-salivaires"
-       class="organesvg"
-       cx="1053.7393"
-       cy="-2664.5239"
-       transform="scale(1,-1)"
-       rx="115.34073"
-       ry="105.24628"
-       inkscape:label="glandes-salivaires" />
-    <path
-       style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
-       id="glande-thyroide"
-       class="organesvg"
-       transform="scale(1,-1)"
-       sodipodi:type="arc"
-       sodipodi:cx="1399.8152"
-       sodipodi:cy="-2556.2747"
-       sodipodi:rx="139.4256"
-       sodipodi:ry="69.925636"
-       sodipodi:start="0"
-       sodipodi:end="6.2822088"
-       sodipodi:arc-type="slice"
-       d="m 1539.2408,-2556.2747 a 139.4256,69.925636 0 0 1 -139.3916,69.9257 139.4256,69.925636 0 0 1 -139.4596,-69.8915 139.4256,69.925636 0 0 1 139.3235,-69.9598 139.4256,69.925636 0 0 1 139.5276,69.8574 l -139.4255,0.068 z"
-       inkscape:label="glande-thyroide" />
+       </template>
   </g>
 </svg>
+</template>
+
+<style scoped>
+.organesvg:hover {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5 !important;
+}
+.organesvg.active {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    opacity: 1 !important;
+}
+</style>
+
+<script setup lang="ts">
+const props = defineProps<{
+  organes: boolean;
+}>();
+
+
+const organeCurrentName = ref(-1) as Ref<number>;
+const organeCurrent = inject("organeCurrent") as Ref<{
+    id: number,
+    nom: string,
+    texte: string,
+    idsvg: string,
+}>;
+
+async function setCurrentOrgane(id:  number) {
+  if (id === organeCurrentName.value) {
+    organeCurrentName.value = -1 ;
+    organeCurrent.value = { id: -1, nom: "", texte: "", idsvg: "" };
+  } else {
+    organeCurrentName.value = id;
+    organeCurrent.value = await $fetch(`/api/dv/${id}`) as any;
+  }
+}
+
+function isCurrentOrgane(id: number) {
+  return organeCurrentName.value === id;
+}
+</script>
