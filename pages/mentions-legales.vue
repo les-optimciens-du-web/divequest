@@ -1,4 +1,5 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+</script>
 
 <template>
     <h1 class="mt-4">Mentions légales</h1>
@@ -40,7 +41,7 @@
             <span class="text-sm ml-2"></span>
         </p>
         <p class="ml-6">
-            - Guillaume RENAUD
+            - Guillaume RENAUD                <NuxtLink class="ml-16" to="/game"><span style="color: white">Game</span></NuxtLink>
             <span class="text-sm ml-2"></span>
         </p>
     </h3>
