@@ -348,6 +348,7 @@
        <ellipse
           style="fill:#000000;fill-rule:evenodd;stroke-width:0.72675002;stroke-dasharray:none;opacity:0"
           id="glandes-salivaires"
+          class="organesvg"
           cx="1053.7393"
           cy="-2664.5239"
           transform="scale(1,-1)"
@@ -357,6 +358,7 @@
        <path
           style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
           id="glande-thyroide"
+          class="organesvg"
           transform="scale(1,-1)"
           sodipodi:type="arc"
           sodipodi:cx="1399.8152"
