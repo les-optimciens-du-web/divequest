@@ -1,8 +1,9 @@
-<template><svg
+<template>
+<svg
    version="1.1"
    id="svg2"
    viewBox="0 0 7438.6665 5090.6665"
-   sodipodi:docname="perso-sous-mer-final.svg"
+   sodipodi:docname="perso-sous-mer-final(ptetre).svg"
    inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,14 +22,14 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.13112405"
-     inkscape:cx="5773.1592"
+     inkscape:cx="2432.8108"
      inkscape:cy="2989.5355"
      inkscape:window-width="1920"
-     inkscape:window-height="1131"
+     inkscape:window-height="1163"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g8" />
+     inkscape:current-layer="g10" />
   <g
      id="g8"
      inkscape:groupmode="layer"
@@ -37,10 +38,7 @@
     <g
        id="g10"
        transform="matrix(0.1,0,0,0.1,0,1.4707032e-4)">
-      <path
-         d="M 0,0 H 55790 V 38180 H 0 V 0"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;opacity:0.17673978"
-         id="path12" />
+       <template v-if="!organes">
       <path
          d="m 18684.3,28431.2 -335.8,-926.9 c -67.1,-128.5 -576.6,18.9 -705,84.6 l -19,10.2 c -129.9,67.2 -179.5,224.8 -113.9,354.7 l 385.4,782.5 c 67.1,129.9 226.3,179.5 354.7,113.8 l 20.5,-10.2 c 128.4,-65.7 478.7,-278.8 413.1,-408.7"
          style="fill:#cc8f00;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -353,7 +351,9 @@
          d="m 8058.98,24098.7 -100.71,562 c 348.87,-164.9 670.01,5.9 861.23,259.9 l 181,-505.1 c -256.91,-291.9 -557.61,-385.4 -941.52,-316.8"
          style="fill:#42527d;fill-opacity:1;fill-rule:evenodd;stroke:none"
          id="path168" />
+         </template>
     </g>
+    <template v-if="organes">
     <ellipse
        style="opacity:0;fill:#000000;stroke-width:0.384602"
        id="bronches"
@@ -364,26 +364,29 @@
        cy="-2408.1018"
        cx="1530.0603"
        inkscape:label="bronches" />
-    <rect
-       style="opacity:0;fill:#000000;stroke-width:0.75"
-       id="glande-thyroide"
-       class="organesvg"
-       width="260.49023"
-       height="144.83673"
-       x="1269.5701"
-       y="-2626.2002"
-       transform="scale(1,-1)"
-       inkscape:label="glande-thyroide" />
-    <rect
-       style="opacity:0;fill:#000000;stroke-width:0.75"
-       id="glandes-salivaires"
-       class="organesvg"
-       width="203.78"
-       height="196.62001"
-       x="965.29999"
-       y="-2769.7703"
-       transform="scale(1,-1)"
-       inkscape:label="glandes-salivaires" />
+       <ellipse
+          style="fill:#000000;fill-rule:evenodd;stroke-width:0.72675002;stroke-dasharray:none;opacity:0"
+          id="glandes-salivaires"
+          cx="1053.7393"
+          cy="-2664.5239"
+          transform="scale(1,-1)"
+          rx="115.34073"
+          ry="105.24628"
+          inkscape:label="glandes-salivaires" />
+       <path
+          style="fill:#000000;fill-rule:evenodd;stroke-width:0.75;opacity:0"
+          id="glande-thyroide"
+          transform="scale(1,-1)"
+          sodipodi:type="arc"
+          sodipodi:cx="1399.8152"
+          sodipodi:cy="-2556.2747"
+          sodipodi:rx="139.4256"
+          sodipodi:ry="69.925636"
+          sodipodi:start="0"
+          sodipodi:end="6.2822088"
+          sodipodi:arc-type="slice"
+          d="m 1539.2408,-2556.2747 a 139.4256,69.925636 0 0 1 -139.3916,69.9257 139.4256,69.925636 0 0 1 -139.4596,-69.8915 139.4256,69.925636 0 0 1 139.3235,-69.9598 139.4256,69.925636 0 0 1 139.5276,69.8574 l -139.4255,0.068 z"
+          inkscape:label="glande-thyroide" />
     <path
        style="opacity:0;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke-width:0.44999;stroke-dasharray:none"
        id="poumons"
@@ -441,8 +444,10 @@
        cy="3517.4292"
        cx="-225.67226"
        inkscape:label="veines-et-arteres" />
+       </template>
   </g>
-</svg></template>
+</svg>
+</template>
 
 <style scoped>
 .organesvg:hover {
@@ -452,3 +457,10 @@
     opacity: 1 !important;
 }
 </style>
+
+<script setup lang="ts">
+const props = defineProps<{
+  organes: boolean;
+}>();
+
+</script>
